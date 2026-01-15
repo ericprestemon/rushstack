@@ -318,7 +318,8 @@ export class InputsSnapshot implements IInputsSnapshot {
         const additionalFilesForOperation: ReadonlySet<string> | undefined =
           record.additionalFilesByOperationName?.get(operationName);
         if (additionalFilesForOperation) {
-          for (const [filePath, hash] of this._resolveHashes(additionalFilesForOperation)) {
+          const sortedAdditionalFiles: string[] = Array.from(additionalFilesForOperation).sort();
+          for (const [filePath, hash] of this._resolveHashes(sortedAdditionalFiles)) {
             hashes.set(filePath, hash);
           }
         }
