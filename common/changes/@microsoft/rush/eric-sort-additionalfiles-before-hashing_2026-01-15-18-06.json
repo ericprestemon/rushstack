@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@microsoft/rush",
+      "comment": "Sort files from dependsOnAdditionalFiles for hashing stability",
+      "type": "none"
+    }
+  ],
+  "packageName": "@microsoft/rush"
+}
